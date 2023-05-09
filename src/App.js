@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import Profile from './Profile/Profile';
+import ProfilePhoto from './Profile/profile.jpg';
+import HandleName from './HandleName';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+
+
+export class App extends React.Component {
+  render(){
+    return(
+      <div  style={{ border: 'solid 1px black', maxWidth: '100vw' }}>
+        
+  
+        <Profile  FullName="Cyrine Benali"/>
+        <Profile Bio="i'll write my bio later"/>
+        <Profile Profession="Agro-economist engineer"/>
+        <img src={ProfilePhoto} alt="Profile" style={{ width: '300px' }}/>
+        <div>
+        
+  
+          <HandleName FullName="Cyrine Benali" />
+        </div>
+      </div>
+    );
+  }
+  
+}
 export default App;
